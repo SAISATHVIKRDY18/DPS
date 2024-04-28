@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Quiz Program</h1>
+        <div id="quizContainer">
+            <form id="quizForm" onsubmit="startQuiz(event)">
+                <label for="username">Enter your username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="numQuestions">Enter the number of questions:</label>
+                <input type="number" id="numQuestions" name="numQuestions" min="1" required>
+                <label for="timeLimit">Enter the time limit in seconds:</label>
+                <input type="number" id="timeLimit" name="timeLimit" min="0">
+                <div class="file-upload">
+                    <label for="questionFile" class="file-upload-label">Upload your Question File</label>
+                    <input type="file" id="questionFile" name="questionFile" accept=".json" required>
+                </div>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+        <div id="quizResult" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
